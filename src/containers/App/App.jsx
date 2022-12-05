@@ -1,11 +1,15 @@
+import React from 'react';
 
+import Navigation from '../../components/Navitation';
+import HomePage from '../HomePage/HomePage';
 
 const App = () => {
 
 
   return (
       <>
-        <h1>Hello World!</h1>
+        <Navigation/>
+        <HomePage/>
       </>
   )
 }
