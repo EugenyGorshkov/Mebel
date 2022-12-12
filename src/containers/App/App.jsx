@@ -10,9 +10,7 @@ const App = () => {
   return (
     <>
       <NavigationFull />
-      <div className='container mx-auto'>
-
-
+      <div>
         <Routes>
           <Route path='/' element={<HomePage />} />
         </Routes>
