@@ -8,7 +8,11 @@ module.exports = {
     fontFamily: {
       'sans': ['Raleway','sans-serif'],
     },
-    extend: {},
+    extend: {
+      colors: {
+        'homeColor1': '#CCB2A3'
+      }
+    },
   },
   plugins: [],
 }
