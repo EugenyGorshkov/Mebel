@@ -8,14 +8,14 @@ const HomePage = () => {
             <div className='h-screen'>
                 <div className='bg-homeColor1 h-3/5'>
                     <div className='container mx-auto flex lg:flex-row flex-col'>
-                        <div className='basis-1/3 ml-[15px]'>
+                        <div className='basis-1/3 ml-[15px] mr-[15px]'>
                             <div className='lg:mt-96'>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium amet dolorum
                                     est excepturi facere illum, impedit ipsa ipsam, labore laboriosam magni nemo neque
                                     nulla obcaecati odit praesentium quasi quisquam sunt?</p>
                             </div>
                         </div>
-                        <div className='basis-2/3 mr-[15px]'>
+                        <div className='basis-2/3 lg:mr-[15px]'>
                             <div className='lg:mt-36'>
                                 <img src={mainImg} alt='none'></img>
                             </div>

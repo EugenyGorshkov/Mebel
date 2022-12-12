@@ -24,7 +24,7 @@ const NavigationFull = () => {
         <nav className='flex relative h-[64px] justify-between items-center lg:justify-center max-w-none lg:h-[120px]'>
             <img className='block lg:hidden max-w-[34px] ml-4' src={logo} alt="#" />
 
-            <div className={cn('lg:hidden mr-4', styles.burger__icon)} onClick={activeBurgerHandler}>
+            <div className={cn('lg:hidden mr-4', styles.burger__icon, activeBurger ? styles._active : '')} onClick={activeBurgerHandler}>
                 <span></span>
             </div>
             
