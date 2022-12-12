@@ -1,0 +1,71 @@
+.burger__icon {
+    order: 0;
+    z-index: 5;
+    display: block;
+    position: relative;
+    width: 34px;
+    height: 30px;
+    cursor: pointer;
+
+    span,
+    &::before,
+    &::after {
+        left: 0;
+        position: absolute;
+        height: 10%;
+        width: 100%;
+        transition: all 0.3s ease 0s;
+        background-color: black;
+    }
+    &::after,
+    &::before {
+        content: '';
+    }
+    &::after {
+        bottom: 0;
+    }
+    &::before {
+        top: 0;
+    }
+    span {
+        top: 50%;
+        transform: scale(1) translate(0px, -50%);
+    }
+    &._active span {
+        transform: scale(0) translate(0px, -50%);
+    }
+    &._active::before  {
+        top: 50%;
+        transform: rotate(-45deg) translate(0px, -50%);
+    }
+    &._active::after  {
+        bottom: 50%;
+        transform: rotate(45deg) translate(0px, 50%);
+    }
+
+}
+
+.burger_body {
+    @media (max-width: 1024px) {
+        text-align: center;
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 0;
+        padding: 0;
+        margin: 0;
+        height: 100vh;
+        margin-top: 64px;
+        width: 100%;
+        transform: translateX(+100%);
+        background-color: white;
+        transition: all 0.1s;   
+        &._active {
+            transform: translateX(0);
+        }
+    }
+    & li {
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+}

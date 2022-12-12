@@ -9,6 +9,7 @@ const HomePage = () => {
             <div>Задать вопрос</div>
             <div>Партнеры</div>
             <div>Футер</div>
+            <div></div>
         </>
     )
 }

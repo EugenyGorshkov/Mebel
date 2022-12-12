@@ -11,8 +11,6 @@ const App = () => {
     <>
       <NavigationFull />
       <div className='container mx-auto'>
-
-
         <Routes>
           <Route path='/' element={<HomePage />} />
         </Routes>
