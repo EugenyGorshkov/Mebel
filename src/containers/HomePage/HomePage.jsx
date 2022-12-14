@@ -1,4 +1,7 @@
 import React from 'react';
+
+import QuestionForm from '../../components/HomePage/QuestionForm';
+
 import mainImg from '/src/assets/10000_Post01.svg'
 import secondImg from '/src/assets/Rectangle.svg'
 
@@ -42,9 +45,8 @@ const HomePage = () => {
                     </div>
                 </div>
             </div>
-            <div className="h-screen">Задать вопрос</div>
+            <QuestionForm />
             <div className="h-screen">Партнеры</div>
-            <div className="h-screen">Футер</div>
         </>
     )
 }
