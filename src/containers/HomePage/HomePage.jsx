@@ -69,23 +69,9 @@ const HomePage = () => {
             <QuestionForm/>
 
             {/*Партнеры*/}
-            <div className='container mx-auto h-screen flex lg:flex-col'>
-                <div>
+            <div className='container mx-auto h-screen flex'>
                     <h1>Партнеры</h1>
-                </div>
-                <div className='flex lg:flex-row flex-wrap lg:mt-24 justify-between max-h-10 max-w-10'>
-                    <img src={zaraLogo} alt='none'/>
-                    <img src={samsungLogo} alt='none'/>
-                    <img src={appleLogo} alt='none'/>
-                    <img src={vogueLogo} alt='none'/>
-                </div>
-                <div className='flex lg:flex-row flex-wrap lg:mt-24 justify-between max-h-10 max-w-10'>
-                    <img src={zaraLogo} alt='none'/>
-                    <img src={samsungLogo} alt='none'/>
-                    <img src={appleLogo} alt='none'/>
-                    <img src={vogueLogo} alt='none'/>
-                </div>
-                <div className='flex lg:flex-row flex-wrap  lg:mt-24 justify-between max-h-10 max-w-10'>
+                <div className='flex flex-col lg:flex-row mt-24 lg:justify-between h-64 w-64'>
                     <img src={zaraLogo} alt='none'/>
                     <img src={samsungLogo} alt='none'/>
                     <img src={appleLogo} alt='none'/>
