@@ -35,15 +35,16 @@ const HomePage = () => {
             {/*Блоки с примерами товаром*/}
             <div className='container mx-auto h-screen flex flex-col'>
                 <h1 className=''>Мои работы</h1>
-                <div className='flex flex-row items-center justify-center gap-12 mt-24'>
-                    <div className='w-96 h-96 bg-amber-600'>1</div>
-                    <div className='w-96 h-96 bg-amber-600'>2</div>
-                    <div className='w-96 h-96 bg-amber-600'>3</div>
+                <div className='flex lg:flex-row flex-col items-center justify-center gap-12 mt-24'>
+                    <div className='max-w-96 max-h-96 lg:h-96 lg:w-96 bg-amber-600'>1</div>
+                    <div className='max-w-96 max-h-96 lg:h-96 lg:w-96  bg-amber-600'>2</div>
+                    <div className='max-w-96 max-h-96 lg:h-96 lg:w-96  bg-amber-600'>3</div>
                 </div>
                 <div className='flex flex-col items-center justify-center'>
-                <button className='h-10 bg-[#FF9619] mt-36 mb-5 text-sm text-white font-bold uppercase w-1/2'>Перейти в
-                    галерею
-                </button>
+                    <button
+                        className='h-10 bg-[#FF9619] mt-36 mb-5 text-sm text-white font-bold uppercase w-1/2'>Перейти в
+                        галерею
+                    </button>
                 </div>
             </div>
 
@@ -51,10 +52,10 @@ const HomePage = () => {
             <div className='container mx-auto h-screen flex flex-col'>
                 <h1>С чего все началось</h1>
                 <div className='flex items-center justify-center mt-24'>
-                    <div className='relative '>
+                    <div className='lg:relative '>
                         <img className='static z-0' src={mainImg} alt='none'/>
-                        <div className='absolute bottom-0 left-0'>
-                            <div className='bg-gray-700 z-10 lg:mb-52 -ml-52 h-96 w-96'>
+                        <div className='lg:absolute lg:bottom-0 lg:left-0'>
+                            <div className='bg-gray-700 lg:z-10 lg:mb-52 lg:-ml-52 lg:h-96 lg:w-96 max-h-96 max-w-96'>
                                 <p className='m-4'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium
                                     amet dolorum
                                     est excepturi facere illum, impedit ipsa ipsam, labore laboriosam magni nemo neque
@@ -68,21 +69,23 @@ const HomePage = () => {
             <QuestionForm/>
 
             {/*Партнеры*/}
-            <div className='container mx-auto h-screen flex flex-col'>
-                <h1>Партнеры</h1>
-                <div className='flex flex-row mt-24 justify-between'>
+            <div className='container mx-auto h-screen flex lg:flex-col'>
+                <div>
+                    <h1>Партнеры</h1>
+                </div>
+                <div className='flex lg:flex-row flex-wrap lg:mt-24 justify-between max-h-10 max-w-10'>
                     <img src={zaraLogo} alt='none'/>
                     <img src={samsungLogo} alt='none'/>
                     <img src={appleLogo} alt='none'/>
                     <img src={vogueLogo} alt='none'/>
                 </div>
-                <div className='flex flex-row mt-36 justify-between'>
+                <div className='flex lg:flex-row flex-wrap lg:mt-24 justify-between max-h-10 max-w-10'>
                     <img src={zaraLogo} alt='none'/>
                     <img src={samsungLogo} alt='none'/>
                     <img src={appleLogo} alt='none'/>
                     <img src={vogueLogo} alt='none'/>
                 </div>
-                <div className='flex flex-row mt-36 justify-between'>
+                <div className='flex lg:flex-row flex-wrap  lg:mt-24 justify-between max-h-10 max-w-10'>
                     <img src={zaraLogo} alt='none'/>
                     <img src={samsungLogo} alt='none'/>
                     <img src={appleLogo} alt='none'/>
