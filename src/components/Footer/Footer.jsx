@@ -26,10 +26,10 @@ const Footer = () => {
                             <img src={VK} alt="Instagram" />
                         </a>
                     </div>
-                    <div className='text-white'>+38 (099)-638-45-37</div>
+                    <div className='text-white'>+7 (888) 888-88-88</div>
                 </div>
                 <img src={Logo} alt="Logo" className='max-h-11 lg:order-1 lg:max-h-20'/>
-                <div className='text-white lg:order-2'>© 1993–2021 Интернет-магазин «EKMI™» — меблі</div>
+                <div className='text-white lg:order-2'>by One easy eye™</div>
             </div>
         </footer>
     )
