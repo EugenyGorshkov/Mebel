@@ -8,52 +8,82 @@ import zaraLogo from '/src/assets/logoSponcer/1280px-Zara_Logo.svg'
 import appleLogo from '/src/assets/logoSponcer/Apple-icon.svg'
 import vogueLogo from '/src/assets/logoSponcer/vogue-logo-1.svg'
 import samsungLogo from '/src/assets/logoSponcer/pngwing.svg'
+import greenBg from '../../assets/bg-absolute/green.png'
 
 const HomePage = () => {
     return (
         <>
             {/*Стартовое отображение*/}
-            <div className='h-screen'>
-                <div className='bg-homeColor1 h-3/5'>
-                    <div className='container mx-auto flex lg:flex-row flex-col'>
-                        <div className='basis-1/3 ml-[15px] mr-[15px]'>
-                            <div className='lg:mt-96'>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium amet dolorum
-                                    est excepturi facere illum, impedit ipsa ipsam, labore laboriosam magni nemo neque
-                                    nulla obcaecati odit praesentium quasi quisquam sunt?</p>
-                            </div>
-                        </div>
-                        <div className='basis-2/3 lg:mr-[15px]'>
-                            <div className='lg:mt-36'>
-                                <img src={mainImg} alt='none'></img>
-                            </div>
+            <div className='h-screen relative'>
+                <div className='z-0 absolute top-0 left-0 bg-[#CCB2A3] w-full h-[600px]'></div>
+                <div className='z-10 relative container mx-auto flex lg:flex-row flex-col'>
+                    <div className='basis-1/3 lg:ml-[130px] mr-[15px]'>
+                        <div className='lg:mt-24'>
+                            <p className='font-semibold text-2xl lg:font-bold lg:text-5xl text-white p-5'><span className='text-[#FF9619]'>Л</span>УЧШАЯ <br className='hidden lg:block'/> ЖИЗНЬ, <br className='hidden lg:block'/> СОЗДАННАЯ <br className='hidden lg:block'/> ДЛЯ ВАС!</p>
+                            <button
+                                className='hidden lg:block h-10 bg-[#FF9619] pr-4 pl-4 pt-2 pb-2 mt-20 text-sm text-white font-bold uppercase'>Перейти в
+                                галерею
+                            </button>
                         </div>
                     </div>
+                    <div className='basis-2/3 lg:mr-[15px]'>
+                        <div className='lg:mt-24'>
+                            <img src={mainImg} alt='none'></img>
+                        </div>
+                    </div>
+                    <button
+                        className='lg:hidden block h-10 bg-[#FF9619] pr-4 pl-4 pt-2 pb-2 mt-12 m-3 text-sm text-white font-bold uppercase'>Перейти в
+                                галерею
+                    </button>
                 </div>
             </div>
 
             {/*Блоки с примерами товаром*/}
-            <div className='container mx-auto h-screen flex flex-col'>
-                <h1 className=''>Мои работы</h1>
+            <div className='container mx-auto flex flex-col mb-10'>
+                <h1 className='lg:ml-32 font-bold text-3xl'><span className='text-[#FF9619]'>М</span>ои работы</h1>
                 <div className='flex lg:flex-row flex-col items-center justify-center gap-12 mt-24'>
                     <div className='max-w-96 max-h-96 lg:h-96 lg:w-96 bg-amber-600'>1</div>
                     <div className='max-w-96 max-h-96 lg:h-96 lg:w-96  bg-amber-600'>2</div>
                     <div className='max-w-96 max-h-96 lg:h-96 lg:w-96  bg-amber-600'>3</div>
                 </div>
-                <div className='flex flex-col items-center justify-center'>
-                    <button
-                        className='h-10 bg-[#FF9619] mt-36 mb-5 text-sm text-white font-bold uppercase w-1/2'>Перейти в
-                        галерею
-                    </button>
-                </div>
             </div>
+
+            {/* Секция про индивидульную мебель */}
+            <div className='w-full flex flex-col lg:flex-row lg:items-center max-w-full lg:max-h-[450px]'>
+                <div className='order-2 lg:order-1 lg:basis-4/7 justify-center flex lg:justify-end lg:h-[450px] relative'>
+                        <div className='pl-5 pr-5 lg:pr-0 lg:w-[600px] z-20'>
+                            <img className='w-full object-cover object-center lg:mt-[1.2rem] lg:pb-[1.2rem]' src={mainImg} alt="#" />
+                        </div>
+                        <div className='z-10 absolute w-[70%] h-[260px] lg:h-[390px] -bottom-12 right-0 lg:top-0 lg:w-full object-fill bg-greenBg'></div>
+                        <div className='block z-0 absolute h-[190px] w-full lg:w-[25rem] lg:bottom-0 bg-[#5B5B5B]'></div>
+                        <div className='z-10 absolute h-[42px] w-[67px] lg:h-[100px] lg:w-[200px] lg:left-[35rem] -bottom-5 left-20 bg-[#FF9619]'></div>
+                </div>
+                <div className='order-1 lg:order-2 flex items-center lg:flex-auto lg:h-[450px] lg:basis-3/7 bg-[#5B5B5B] z-10'>
+                        <div className='flex flex-col p-5 order-1 lg:order-2 w-full lg:max-w-[400px]'>
+                            <div className='pr-30'>
+                                <h2 className='font-bold text-3xl text-white'><span className='text-[#FF9619]'>И</span>ндивидуальная мебель</h2>
+                                <p className='font-medium text-xl text-white pt-5'>Полный цикл производства.</p>
+                                <p className='font-light text-white pt-3'>Качество мягкой мебели начинается задолго до начала ее производства.</p>
+                                <button
+                                    className='hidden lg:block h-10 bg-[#FF9619] pr-4 pl-4 pt-2 pb-2 mt-5 text-sm text-white font-bold uppercase'>Перейти в
+                                    галерею
+                                </button>
+                            </div>
+                        </div>
+                </div>
+                <button 
+                className='block lg:hidden h-10 bg-[#FF9619] pr-4 pl-4 pt-2 pb-2 mt-16 m-5 text-sm text-white font-bold uppercase order-3'>Перейти в
+                            галерею
+                </button>
+            </div>
+            
 
 
             <div className='container mx-auto h-screen flex flex-col'>
-                <h1>С чего все началось</h1>
+                <h1 className='lg:ml-32 font-bold text-3xl mt-10'><span className='text-[#FF9619]'>С</span> чего все началось</h1>
                 <div className='flex items-center justify-center mt-24'>
                     <div className='lg:relative '>
-                        <img className='static z-0' src={mainImg} alt='none'/>
+                        <img className='static z-0' src={mainImg} alt='none' />
                         <div className='lg:absolute lg:bottom-0 lg:left-0'>
                             <div className='bg-gray-700 lg:z-10 lg:mb-52 lg:-ml-52 lg:h-96 lg:w-96 max-h-96 max-w-96'>
                                 <p className='m-4'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium
@@ -66,16 +96,19 @@ const HomePage = () => {
                 </div>
             </div>
 
-            <QuestionForm/>
+            {/* Форма для обратного звонка */}
+            <QuestionForm />
 
             {/*Партнеры*/}
-            <div className='container mx-auto h-screen flex'>
-                    <h1>Партнеры</h1>
-                <div className='flex flex-col lg:flex-row mt-24 lg:justify-between h-64 w-64'>
-                    <img src={zaraLogo} alt='none'/>
-                    <img src={samsungLogo} alt='none'/>
-                    <img src={appleLogo} alt='none'/>
-                    <img src={vogueLogo} alt='none'/>
+            <div className='container mx-auto'>
+                <div className='flex flex-col'>
+                    <h1 className='lg:ml-32 font-bold text-3xl mt-10'><span className='text-[#FF9619]'>П</span>артнеры</h1>
+                    <div className='flex flex-col justify-center items-center lg:flex-row mt-24 lg:justify-around mb-10'>
+                        <img src={zaraLogo} className='h-64 w-64' alt='none' />
+                        <img src={samsungLogo} className='h-64 w-64' alt='none' />
+                        <img src={appleLogo} className='h-64 w-64' alt='none' />
+                        <img src={vogueLogo} className='h-64 w-64' alt='none' />
+                    </div>
                 </div>
             </div>
         </>
