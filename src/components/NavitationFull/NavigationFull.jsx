@@ -45,7 +45,7 @@ const NavigationFull = () => {
                     </li>
                     {/* <ul><li></li></ul> */}
                     <li className={styleListItemTw}>
-                        <Link to='/contacts'>Контакты</Link>
+                        <Link to='/gallery'>Галлерея</Link>
                     </li>
                 </ul>
                 {/* Logo 2 */}
@@ -56,7 +56,7 @@ const NavigationFull = () => {
                         <Link to='/about'>О Компании</Link>
                     </li>
                     <li className={styleListItemTw}>
-                        <Link to='/12'>8-800-555-35-35</Link>
+                        <Link to='/contacts'>Контакты</Link>
                     </li>
                     <li className={styleListItemTw}>
                         Ru
