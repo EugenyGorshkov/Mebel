@@ -3,21 +3,23 @@ import { Route, Routes } from 'react-router-dom';
 
 import Footer from '../../components/Footer';
 import NavigationFull from '../../components/NavitationFull';
+import ContactsPage from '../ContactsPage';
 import HomePage from '../HomePage/HomePage';
 
 const App = () => {
 
 
   return (
-    <>
+    <div className='flex flex-col h-full'>
       <NavigationFull />
-      <div className='mt-[64px] lg:mt-[120px]'>
+      <div className='mt-[64px] lg:mt-[120px] flex-auto'>
         <Routes>
           <Route path='/' element={<HomePage />} />
+          <Route path='/contacts' element={<ContactsPage />} />
         </Routes>
       </div>
       <Footer />
-    </>
+    </div>
 
   )
 }

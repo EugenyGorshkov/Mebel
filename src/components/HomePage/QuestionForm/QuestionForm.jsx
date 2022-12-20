@@ -10,8 +10,8 @@ const QuestionForm = () => {
     }
 
     return (
-        <div className='bg-[#A9C2BE] h-screen flex'>
-            <div className='container mx-auto flex items-center justify-center'>
+        <div className='bg-[#A9C2BE] flex'>
+            <div className='container mx-auto flex items-center justify-center mt-8 mb-8'>
                 <form className='flex flex-col bg-white mr-5 ml-5 p-8 gap-3'>
                     <p className='font-medium text-[#FF9619] pt-5'>Заполните форму</p>
                     <p className='font-bold text-xl uppercase'>остались вопросы?</p>
