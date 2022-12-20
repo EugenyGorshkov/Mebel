@@ -7,13 +7,15 @@ const GalleryPage = () => {
     const {loading, error, data} = useQuery(FETCH_IMAGES)
 
     if (loading) {
-        return <h2>Loading...</h2>
+        return <h2 className="text-center pt-12 font-bold text-xl">Loading...</h2>
     }
 
     if (error) {
         return (
             <div className='w-full h-full object-cover object-center'>
-                <h2 className='text-center pt-12 text-white'>Could not fetch. We are working at problem</h2>
+                <h2 className='text-center pt-12 font-bold text-xl'>
+                    Failed to get data. We are working at problem
+                </h2>
             </div>
         )
     }

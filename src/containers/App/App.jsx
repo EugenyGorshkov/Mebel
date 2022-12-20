@@ -4,8 +4,8 @@ import {Route, Routes} from 'react-router-dom';
 import Footer from '../../components/Footer';
 import NavigationFull from '../../components/NavitationFull';
 import ContactsPage from '../ContactsPage';
-import HomePage from '../HomePage/HomePage';
-import GalleryPage from "../GalleryPage/GalleryPage.jsx";
+import HomePage from '../HomePage/';
+import GalleryPage from "../GalleryPage/";
 
 const App = () => {
 

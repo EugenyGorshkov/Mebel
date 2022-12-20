@@ -76,21 +76,14 @@ const HomePage = () => {
                                 <p className='font-light text-white pt-3'>
                                     Качество мягкой мебели начинается задолго до начала ее производства.
                                 </p>
-                                <button
-                                    className='hidden lg:block h-10 bg-[#FF9619] pr-4 pl-4 pt-2 pb-2 mt-5 text-sm text-white font-bold uppercase'>Перейти в
-                                    галерею
-                                </button>
                             </div>
                         </div>
                 </div>
-                <button className='block lg:hidden h-10 bg-[#FF9619] pr-4 pl-4 pt-2 pb-2 mt-16 m-5 text-sm text-white font-bold uppercase order-3'>
-                        Перейти в галерею
-                </button>
             </div>
             
 
             {/* Блок истории */}
-            <div className='container mx-auto flex flex-col lg:mb-24'>
+            <div className='container mx-auto flex flex-col lg:mb-24 mt-24'>
                 <h1 className='lg:ml-32 font-bold text-3xl mt-10 p-2 lg:p-0'><span className='text-[#FF9619]'>С</span> чего все началось</h1>
                 <div className='flex flex-col lg:relative mt-4'>
                     <div className='lg:absolute top-40 left-32 bg-[#5B5B5B] p-5 lg:p-10 lg:w-[540px] text-white z-10'>
