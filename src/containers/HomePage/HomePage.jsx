@@ -7,6 +7,7 @@ import zaraLogo from '/src/assets/logoSponcer/1280px-Zara_Logo.svg'
 import appleLogo from '/src/assets/logoSponcer/Apple-icon.svg'
 import vogueLogo from '/src/assets/logoSponcer/vogue-logo-1.svg'
 import samsungLogo from '/src/assets/logoSponcer/pngwing.svg'
+import Carousel from '../../components/HomePage/Carousel';
 
 const HomePage = () => {
     return (
@@ -43,11 +44,7 @@ const HomePage = () => {
             {/*Блоки с примерами товара*/}
             <div className='container mx-auto flex flex-col mb-24'>
                 <h1 className='lg:ml-32 font-bold text-3xl p-2 lg:p-0'><span className='text-[#FF9619]'>М</span>ои работы</h1>
-                <div className='flex lg:flex-row flex-col items-center justify-center gap-12 mt-24'>
-                    <div className='max-w-96 max-h-96 lg:h-96 lg:w-96 bg-amber-600'>1</div>
-                    <div className='max-w-96 max-h-96 lg:h-96 lg:w-96  bg-amber-600'>2</div>
-                    <div className='max-w-96 max-h-96 lg:h-96 lg:w-96  bg-amber-600'>3</div>
-                </div>
+                <Carousel />
             </div>
 
             {/* Секция про индивидульную мебель */}
