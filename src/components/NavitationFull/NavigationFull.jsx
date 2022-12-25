@@ -27,7 +27,15 @@ const NavigationFull = () => {
             className='flex z-50 bg-white bg-opacity-90 backdrop-blur-[5px] fixed h-[64px] justify-between items-center lg:justify-center max-w-none lg:h-[120px] top-0 left-[50%] w-full translate-x-[-50%]'
         >
             {/* Logo 1 Mobile*/}
-            <img className='block lg:hidden max-w-[34px] ml-4' src={logo} alt="#" />
+            <div className='block lg:hidden max-w-[34px] ml-4 relative'>
+                <img className='w-full' src={logo} alt="#" />
+                <div className='absolute top-1 -right-64'>
+                    <select name="" id="" >
+                                <option value="ru">RU</option>
+                                <option value="en">EN</option>
+                    </select>
+                </div>
+            </div>
 
             {/* Burger icon */}
             <div 
@@ -58,7 +66,7 @@ const NavigationFull = () => {
                     <li className={styleListItemTw}>
                         <Link to='/contacts'>Контакты</Link>
                     </li>
-                    <div className='absolute top-7 -right-20'>
+                    <div className='hidden lg:block absolute top-7 -right-20'>
                         <select name="" id="" >
                             <option value="ru">RU</option>
                             <option value="en">EN</option>
