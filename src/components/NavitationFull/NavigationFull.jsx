@@ -38,7 +38,7 @@ const NavigationFull = () => {
             </div>
             
             {/* Menu body */}
-            <div className={cn('block lg:flex gap-16', styles.burger_body, activeBurger ? styles._active : '')}>
+            <div className={cn('block lg:flex w-full lg:justify-center gap-16', styles.burger_body, activeBurger ? styles._active : '')}>
                 <ul className='block lg:flex items-center gap-16'>
                     <li className={styleListItemTw}>
                         <Link to='/'>Главная</Link>
@@ -51,16 +51,20 @@ const NavigationFull = () => {
                 {/* Logo 2 Desctop*/}
                 <img className='hidden lg:block max-w-[80px]' src={logo} alt="#" />
  
-                <ul className='block lg:flex items-center gap-16'>
+                <ul className='block lg:flex items-center gap-16 relative'>
                     <li className={styleListItemTw}>
                         <Link to='/about'>О Компании</Link>
                     </li>
                     <li className={styleListItemTw}>
                         <Link to='/contacts'>Контакты</Link>
                     </li>
-                    <li className={styleListItemTw}>
-                        Ru
-                    </li>
+                    <div className='absolute top-7 -right-20'>
+                        <select name="" id="" >
+                            <option value="ru">RU</option>
+                            <option value="en">EN</option>
+                        </select>
+                    </div>
+                    
                 </ul>
             </div>
 
