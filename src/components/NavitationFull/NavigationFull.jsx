@@ -26,8 +26,16 @@ const NavigationFull = () => {
         <nav 
             className='flex z-50 bg-white bg-opacity-90 backdrop-blur-[5px] fixed h-[64px] justify-between items-center lg:justify-center max-w-none lg:h-[120px] top-0 left-[50%] w-full translate-x-[-50%]'
         >
-            {/* Logo 1 */}
-            <img className='block lg:hidden max-w-[34px] ml-4' src={logo} alt="#" />
+            {/* Logo 1 Mobile*/}
+            <div className='block lg:hidden max-w-[34px] ml-4 relative'>
+                <img className='w-full' src={logo} alt="#" />
+                <div className='absolute top-1 -right-64'>
+                    <select name="" id="" >
+                                <option value="ru">RU</option>
+                                <option value="en">EN</option>
+                    </select>
+                </div>
+            </div>
 
             {/* Burger icon */}
             <div 
@@ -38,7 +46,7 @@ const NavigationFull = () => {
             </div>
             
             {/* Menu body */}
-            <div className={cn('block lg:flex gap-16', styles.burger_body, activeBurger ? styles._active : '')}>
+            <div className={cn('block lg:flex w-full lg:justify-center gap-16', styles.burger_body, activeBurger ? styles._active : '')}>
                 <ul className='block lg:flex items-center gap-16'>
                     <li className={styleListItemTw}>
                         <Link to='/'>Главная</Link>
@@ -48,19 +56,23 @@ const NavigationFull = () => {
                         <Link to='/gallery'>Галлерея</Link>
                     </li>
                 </ul>
-                {/* Logo 2 */}
+                {/* Logo 2 Desctop*/}
                 <img className='hidden lg:block max-w-[80px]' src={logo} alt="#" />
  
-                <ul className='block lg:flex items-center gap-16'>
+                <ul className='block lg:flex items-center gap-16 relative'>
                     <li className={styleListItemTw}>
                         <Link to='/about'>О Компании</Link>
                     </li>
                     <li className={styleListItemTw}>
                         <Link to='/contacts'>Контакты</Link>
                     </li>
-                    <li className={styleListItemTw}>
-                        Ru
-                    </li>
+                    <div className='hidden lg:block absolute top-7 -right-20'>
+                        <select name="" id="" >
+                            <option value="ru">RU</option>
+                            <option value="en">EN</option>
+                        </select>
+                    </div>
+                    
                 </ul>
             </div>
 

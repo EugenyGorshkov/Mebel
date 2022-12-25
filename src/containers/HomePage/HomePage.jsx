@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import QuestionForm from '../../components/HomePage/QuestionForm';
 
@@ -13,10 +14,10 @@ const HomePage = () => {
     return (
         <>
             {/*Стартовое отображение*/}
-            <div className='relative lg:mb-36 overflow-hidden'>
-                <div className='z-0 absolute top-0 left-0 bg-[#CCB2A3] w-full h-[600px]'></div>
+            <div className='relative lg:mb-36 overflow-hidden lg:pb-8'>
+                <div className='z-0 absolute top-0 left-0 bg-[#CCB2A3] w-full h-full lg:h-[600px]'></div>
                 <div className='z-10 relative container mx-auto flex lg:flex-row flex-col'>
-                    <div className='basis-1/3 lg:ml-[130px] mr-[15px]'>
+                    <div className='basis-1/3  xl:ml-6 lg:pl-8 mr-[15px]'>
                         <div className='lg:mt-24'>
                             <p className='font-semibold text-2xl lg:font-bold lg:text-5xl text-white p-5'>
                                 <span className='text-[#FF9619]'>Л</span>УЧШАЯ <br className='hidden lg:block'/> 
@@ -25,13 +26,12 @@ const HomePage = () => {
                                 ДЛЯ ВАС!
                             </p>
                             <button
-                                className='hidden lg:block h-10 bg-[#FF9619] pr-4 pl-4 pt-2 pb-2 mt-20 text-sm text-white font-bold uppercase'>Перейти в
-                                галерею
+                                className='hidden lg:block lg:w-[65%] h-10 bg-[#FF9619] pr-4 pl-4 pt-2 pb-2 mt-20 ml-4 text-sm text-white font-bold uppercase'><Link to='/gallery'>Перейти в галерею</Link>
                             </button>
                         </div>
                     </div>
                     <div className='basis-2/3 lg:mr-[15px]'>
-                        <div className='lg:mt-24'>
+                        <div className='lg:mt-24 flex justify-center'>
                             <img src={mainImg} alt='none'></img>
                         </div>
                     </div>
@@ -43,7 +43,7 @@ const HomePage = () => {
 
             {/*Блоки с примерами товара*/}
             <div className='container mx-auto flex flex-col mb-24'>
-                <h1 className='lg:ml-32 font-bold text-3xl p-2 lg:p-0'><span className='text-[#FF9619]'>М</span>ои работы</h1>
+                <h1 className='font-bold text-3xl p-2 lg:p-0'><span className='text-[#FF9619]'>М</span>ои работы</h1>
                 <Carousel />
             </div>
 
@@ -81,15 +81,15 @@ const HomePage = () => {
 
             {/* Блок истории */}
             <div className='container mx-auto flex flex-col lg:mb-24 mt-24'>
-                <h1 className='lg:ml-32 font-bold text-3xl mt-10 p-2 lg:p-0'><span className='text-[#FF9619]'>С</span> чего все началось</h1>
+                <h1 className='font-bold text-3xl mt-10 p-2 lg:p-0'><span className='text-[#FF9619]'>С</span> чего все началось</h1>
                 <div className='flex flex-col lg:relative mt-4'>
-                    <div className='lg:absolute top-40 left-32 bg-[#5B5B5B] p-5 lg:p-10 lg:w-[540px] text-white z-10'>
+                    <div className='lg:absolute top-20 bg-[#5B5B5B] p-5 lg:p-10 lg:w-[750px] text-white z-10'>
                         <h2 className='font-medium text-xl mb-6'>Наработки длинной в 25 лет</h2>
                         <p className='font-light text-lg'>Каждый производитель заявляет, что делает все для своих покупателей, но не каждый производитель способен подтвердить свои заявления многолетней историей </p>
                     </div>
                     <div className='lg:self-end p-4 pt-0 lg:p-0 relative'>
-                        <img className='static z-0 lg:mr-32' src={mainImg} alt='#' />
-                        <div className='bg-[#FF9619] h-11 w-12 lg:h-14 lg:w-28 absolute -top-4 right-0 lg:top-96 lg:-left-2 z-10'></div>
+                        <img className='static z-0' src={mainImg} alt='#' />
+                        <div className='bg-[#FF9619] h-11 w-12 lg:h-14 lg:w-28 absolute -top-4 right-0 lg:top-[16.5rem] lg:-left-14 z-10'></div>
                     </div>
                     
                 </div>
@@ -103,7 +103,7 @@ const HomePage = () => {
             {/*Партнеры*/}
             <div className='container mx-auto'>
                 <div className='flex flex-col'>
-                    <h1 className='lg:ml-32 font-bold text-3xl mt-16 p-2 lg:p-0'>
+                    <h1 className='font-bold text-3xl mt-16 p-2 lg:p-0'>
                         <span className='text-[#FF9619]'>П</span>артнеры
                     </h1>
                     <div className='flex flex-col justify-center items-center lg:flex-row mt-24 lg:justify-around mb-10'>
