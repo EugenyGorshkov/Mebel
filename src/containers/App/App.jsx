@@ -4,8 +4,9 @@ import {Route, Routes} from 'react-router-dom';
 import Footer from '../../components/Footer';
 import NavigationFull from '../../components/NavitationFull';
 import ContactsPage from '../ContactsPage';
-import HomePage from '../HomePage/';
-import GalleryPage from "../GalleryPage/";
+import HomePage from '../HomePage';
+import GalleryPage from "../GalleryPage";
+import AboutPage from '../AboutPage';
 
 const App = () => {
 
@@ -17,6 +18,7 @@ const App = () => {
                     <Route path='/' element={<HomePage/>}/>
                     <Route path='/contacts' element={<ContactsPage/>}/>
                     <Route path='/gallery' element={<GalleryPage/>}/>
+                    <Route path='/about' element={<AboutPage/>}/>
                 </Routes>
             </div>
             <Footer/>

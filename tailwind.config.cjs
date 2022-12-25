@@ -19,7 +19,8 @@ module.exports = {
       },
       backgroundImage: {
         'greenBg': "url('./assets/bg-absolute/green.png')",
-      }
+      },
+
     },
   },
   plugins: [],

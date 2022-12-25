@@ -26,7 +26,7 @@ const NavigationFull = () => {
         <nav 
             className='flex z-50 bg-white bg-opacity-90 backdrop-blur-[5px] fixed h-[64px] justify-between items-center lg:justify-center max-w-none lg:h-[120px] top-0 left-[50%] w-full translate-x-[-50%]'
         >
-            {/* Logo 1 */}
+            {/* Logo 1 Mobile*/}
             <img className='block lg:hidden max-w-[34px] ml-4' src={logo} alt="#" />
 
             {/* Burger icon */}
@@ -48,7 +48,7 @@ const NavigationFull = () => {
                         <Link to='/gallery'>Галлерея</Link>
                     </li>
                 </ul>
-                {/* Logo 2 */}
+                {/* Logo 2 Desctop*/}
                 <img className='hidden lg:block max-w-[80px]' src={logo} alt="#" />
  
                 <ul className='block lg:flex items-center gap-16'>
