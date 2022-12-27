@@ -50,19 +50,11 @@ const NavigationFull = (props) => {
             <div className={cn('block lg:flex w-full lg:justify-center gap-16', styles.burger_body, activeBurger ? styles._active : '')}>
                 <ul className='block lg:flex items-center gap-16'>
                     <li className={styleListItemTw}>
-                        <Translation>
-                            {
-                                t => <Link to='/'>{t("NavigationTitle.part1")}</Link>
-                            }
-                        </Translation>
+                        <Link to='/'>Главная</Link>
                     </li>
                     {/* <ul><li></li></ul> */}
                     <li className={styleListItemTw}>
-                        <Translation>
-                            {
-                                t => <Link to='/gallery'>{t("NavigationTitle.part2")}</Link>
-                            }
-                        </Translation>
+                        <Link to='/gallery'>Галлерея</Link>
                     </li>
                 </ul>
                 {/* Logo 2 Desctop*/}
@@ -70,18 +62,10 @@ const NavigationFull = (props) => {
 
                 <ul className='block lg:flex items-center gap-16 relative'>
                     <li className={styleListItemTw}>
-                        <Translation>
-                            {
-                                t => <Link to='/about'>{t("NavigationTitle.part3")}</Link>
-                            }
-                        </Translation>
+                        <Link to='/about'>О Компании</Link>
                     </li>
                     <li className={styleListItemTw}>
-                        <Translation>
-                            {
-                                t => <Link to='/contacts'>{t("NavigationTitle.part4")}</Link>
-                            }
-                        </Translation>
+                        <Link to='/contacts'>Контакты</Link>
                     </li>
 
                     <div className='hidden lg:block absolute top-7 -right-20'>

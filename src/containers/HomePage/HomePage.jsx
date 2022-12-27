@@ -39,14 +39,14 @@ const HomePage = () => {
                         </div>
                     </div>
                     <button
-                        className='lg:hidden block h-10 bg-[#FF9619] pr-4 pl-4 pt-2 pb-2 mt-12 m-3 mb-12 text-sm text-white font-bold uppercase'>Перейти в галерею
+                        className='lg:hidden block h-10 bg-[#FF9619] pr-4 pl-4 pt-2 pb-2 mt-12 m-3 mb-12 text-sm text-white font-bold uppercase'><Link to='/gallery'>Перейти в галерею</Link>
                     </button>
                 </div>
             </div>
 
             {/*Блоки с примерами товара*/}
-            <div className='container mx-auto flex flex-col mb-24'>
-                <h1 className='font-bold text-3xl p-2 lg:p-0'><span className='text-[#FF9619]'>М</span>ои работы</h1>
+            <div className='container mx-auto flex flex-col mb-10 lg:mb-24'>
+                <h1 className='font-bold text-3xl p-5 lg:p-0'><span className='text-[#FF9619]'>М</span>ои работы</h1>
                 <Carousel />
             </div>
 
@@ -84,7 +84,7 @@ const HomePage = () => {
 
             {/* Блок истории */}
             <div className='container mx-auto flex flex-col lg:mb-24 mt-24'>
-                <h1 className='font-bold text-3xl mt-10 p-2 lg:p-0'><span className='text-[#FF9619]'>С</span> чего все началось</h1>
+                <h1 className='font-bold text-3xl lg:mt-10 p-5 lg:p-0'><span className='text-[#FF9619]'>С</span> чего все началось</h1>
                 <div className='flex flex-col lg:relative mt-4'>
                     <div className='lg:absolute top-20 bg-[#5B5B5B] p-5 lg:p-10 lg:w-[750px] text-white z-10'>
                         <h2 className='font-medium text-xl mb-6'>Наработки длинной в 25 лет</h2>
@@ -106,7 +106,7 @@ const HomePage = () => {
             {/*Партнеры*/}
             <div className='container mx-auto'>
                 <div className='flex flex-col'>
-                    <h1 className='font-bold text-3xl mt-16 p-2 lg:p-0'>
+                    <h1 className='font-bold text-3xl mt-16 p-5 lg:p-0'>
                         <span className='text-[#FF9619]'>П</span>артнеры
                     </h1>
                     <div className='flex flex-col justify-center items-center lg:flex-row mt-24 lg:justify-around mb-10'>

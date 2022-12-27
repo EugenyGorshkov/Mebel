@@ -1,13 +1,19 @@
-import React from "react";
-import {useQuery} from "@apollo/client";
-import {FETCH_IMAGES} from "../../apollo/Gallery.js";
+import React, { useState } from "react";
+import { useQuery } from "@apollo/client";
+import { FETCH_IMAGES } from "../../apollo/Gallery.js";
+import Loader from "../../components/UI/Loader/Loader.jsx";
 
 const GalleryPage = () => {
+    const [activeModal, setActiveModla] = useState(false);
 
-    const {loading, error, data} = useQuery(FETCH_IMAGES)
+    const { loading, error, data } = useQuery(FETCH_IMAGES)
 
     if (loading) {
-        return <h2 className="text-center pt-12 font-bold text-xl">Loading...</h2>
+        return (
+            <div className='container mx-auto flex gap-12 lg:flex-row flex-col justify-center'>
+                <Loader />
+            </div>
+        )
     }
 
     if (error) {
@@ -22,17 +28,22 @@ const GalleryPage = () => {
 
     return (
         <>
-            <div className='container mx-auto flex gap-12 lg:flex-row flex-col'>
-                {data.galleries.map(el => {
-                    return (
-                        <div>
-                            <img src={el.content.publicUrl} alt='none' key={el.content.id}/>
-                        </div>
-                    )
-                })}
+            <div className='container mx-auto'>
+                <h2 className="text-center p-5 font-bold text-xl">Примеры работ</h2>
+                <div className="grid lg:grid-cols-3 gap-5 pb-10">
+                    {data.galleries.map(el => {
+                        return (
+                            <div className="ml-5 mr-5 lg:m-0" key={el.content.id}>
+                                <img src={el.content.publicUrl} alt='none'/>
+                            </div>
+                        )
+                    })}
+                </div>
             </div>
         </>
     )
 }
 
 export default GalleryPage
+
+

@@ -10,8 +10,12 @@ import chevronLeft from '../../../assets/arrows/chevron-left.png'
 import chevronRight from '../../../assets/arrows/chevron-right.png'
 
 import styles from './Carousel.module.scss'
+import { useQuery } from '@apollo/client';
+import { FETCH_IMAGES } from '../../../apollo/Gallery';
+import Loader from '../../UI/Loader/Loader';
 
 function SampleNextArrow(props) {
+
     const { onClick } = props;
     return (
       <div className={styles.next} onClick={onClick}>
@@ -68,15 +72,33 @@ const Carousel = () => {
         prevArrow: <SamplePrevArrow/>
     };
 
-    const slider = React.useRef(null);
+    const { loading, error, data } = useQuery(FETCH_IMAGES)
+
+    if (loading) {
+        return (
+            <div className='container mx-auto flex gap-12 lg:flex-row flex-col justify-center'>
+                <Loader />
+            </div>
+        )
+    }
+
+    if (error) {
+        return (
+            <div className='w-full h-full object-cover object-center'>
+                <h2 className='text-center pt-12 font-bold text-xl'>
+                    Failed to get data. We are working at problem
+                </h2>
+            </div>
+        )
+    }
 
     return (
         <>
-            <Slider ref={slider} {...settings}>
-                {Photos.map((el) => {
+            <Slider {...settings}>
+                {data.galleries.map((el) => {
                     return (
-                        <div key={el.id} className='p-5'>
-                            <img src={el.url} alt={el.title} />
+                        <div key={el.content.id} className='p-5' >
+                            <img src={el.content.publicUrl} alt={el.content.id} />
                         </div>
                     )
                 })}
