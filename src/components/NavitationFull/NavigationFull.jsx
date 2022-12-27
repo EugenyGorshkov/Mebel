@@ -10,8 +10,6 @@ const NavigationFull = (props) => {
     const [activeBurger, setActiveBurger] = useState(false);
     const [activeSubTitle, setActiveSubTitle] = useState(false);
 
-    const [language, setLanguage] = useState("ru")
-
     const styleListItemTw = 'whitespace-nowrap uppercase font-semibold text-sm'
 
     // Burger toggle func
