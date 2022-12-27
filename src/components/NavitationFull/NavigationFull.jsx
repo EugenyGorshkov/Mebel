@@ -10,7 +10,7 @@ const NavigationFull = ({changeLanguage}) => {
     const [activeBurger, setActiveBurger] = useState(false);
     const [activeSubTitle, setActiveSubTitle] = useState(false);
 
-    const [ln, setLn] = useState('en')
+    const [ln, setLn] = useState("en")
 
     const styleListItemTw = 'whitespace-nowrap uppercase font-semibold text-sm'
 
@@ -22,10 +22,6 @@ const NavigationFull = ({changeLanguage}) => {
     // Subtitle menu toggle func
     const activeSubTitleHandler = () => {
         activeSubTitle ? setActiveSubTitle(false) : setActiveSubTitle(true)
-    }
-
-    const setupLn = () => {
-        changeLanguage(setLn)
     }
 
     return (
