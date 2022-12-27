@@ -2,9 +2,14 @@ import React, { useState } from "react";
 import { useQuery } from "@apollo/client";
 import { FETCH_IMAGES } from "../../apollo/Gallery.js";
 import Loader from "../../components/UI/Loader/Loader.jsx";
+import GalleryModal from "../../components/GalleryPage/GalleryModal";
 
 const GalleryPage = () => {
-    const [activeModal, setActiveModla] = useState(false);
+    const [activeModal, setActiveModal] = useState(false);
+
+    const activeModalHandler = () => {
+        activeModal ? setActiveModal(false) : setActiveModal(true)
+    }
 
     const { loading, error, data } = useQuery(FETCH_IMAGES)
 
@@ -30,10 +35,14 @@ const GalleryPage = () => {
         <>
             <div className='container mx-auto'>
                 <h2 className="text-center p-5 font-bold text-xl">Примеры работ</h2>
+                <GalleryModal 
+                    activeModalHandler={activeModalHandler} 
+                    activeModal={activeModal}
+                />
                 <div className="grid lg:grid-cols-3 gap-5 pb-10">
                     {data.galleries.map(el => {
                         return (
-                            <div className="ml-5 mr-5 lg:m-0" key={el.content.id}>
+                            <div className="ml-5 mr-5 lg:m-0" key={el.content.id} onClick={activeModalHandler}>
                                 <img src={el.content.publicUrl} alt='none'/>
                             </div>
                         )
