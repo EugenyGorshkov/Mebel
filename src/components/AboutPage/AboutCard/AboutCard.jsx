@@ -18,9 +18,9 @@ const AboutCard = ({
 
     return (
         <>
-            <div className='flex flex-col lg:flex-row '>
-                <div className={cn('flex justify-start basis-3/7 m-5 lg:m-0 order-2', theme === 'one' ? themeOrder1 : themeOrder2)}>
-                    <div className='relative w-full lg:h-60 xl:h-80 '>
+            <div className='flex flex-col lg:flex-row overflow-hidden pb-8 pt-8'>
+                <div className={cn('flex justify-start basis-3/7 m-6 lg:m-0 order-2', theme === 'one' ? themeOrder1 : themeOrder2)}>
+                    <div className='relative w-full lg:h-60 xl:h-80'>
                         <img src={mainImg} alt="#" className='z-10 w-full lg:h-60 xl:h-80'/>
                         <div className={cn('-z-10 absolute h-full w-56 xl:h-80 lg:h-64 lg:w-72 ',theme === 'one' ? themeAbsolute1 + ' ' + themeBgColor1 : themeAbsolute2 + ' ' + themeBgColor2)}></div>
                     </div>

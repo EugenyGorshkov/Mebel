@@ -48,11 +48,11 @@ const NavigationFull = () => {
             {/* Menu body */}
             <div className={cn('block lg:flex w-full lg:justify-center gap-16', styles.burger_body, activeBurger ? styles._active : '')}>
                 <ul className='block lg:flex items-center gap-16'>
-                    <li className={styleListItemTw}>
+                    <li className={styleListItemTw} onClick={activeBurgerHandler}>
                         <Link to='/'>Главная</Link>
                     </li>
                     {/* <ul><li></li></ul> */}
-                    <li className={styleListItemTw}>
+                    <li className={styleListItemTw} onClick={activeBurgerHandler}>
                         <Link to='/gallery'>Галлерея</Link>
                     </li>
                 </ul>
@@ -60,10 +60,10 @@ const NavigationFull = () => {
                 <img className='hidden lg:block max-w-[80px]' src={logo} alt="#" />
  
                 <ul className='block lg:flex items-center gap-16 relative'>
-                    <li className={styleListItemTw}>
+                    <li className={styleListItemTw} onClick={activeBurgerHandler}>
                         <Link to='/about'>О Компании</Link>
                     </li>
-                    <li className={styleListItemTw}>
+                    <li className={styleListItemTw} onClick={activeBurgerHandler}>
                         <Link to='/contacts'>Контакты</Link>
                     </li>
                     <div className='hidden lg:block absolute top-7 -right-20'>
