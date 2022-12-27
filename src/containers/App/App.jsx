@@ -18,17 +18,17 @@ const App = () => {
         i18n.changeLanguage(language)
     }
 
-    const changeRu = () => {
-        changeLanguage("ru")
-    }
+    // const changeRu = () => {
+    //     changeLanguage("ru")
+    // }
 
-    const changeEng = () => {
-        changeLanguage("en")
-    }
+    // const changeEng = () => {
+    //     changeLanguage("en")
+    // }
 
     return (
         <div className='flex flex-col h-full'>
-            <NavigationFull changeRu={changeRu} changeEng={changeEng}/>
+            <NavigationFull changeLanguage={changeLanguage}/>
             <div className='mt-[64px] lg:mt-[120px] flex-auto'>
                 <Routes>
                     <Route path='/' element={<HomePage />} />

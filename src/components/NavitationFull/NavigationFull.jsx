@@ -6,7 +6,7 @@ import logo from '../../assets/logo.svg'
 import styles from './NavigationFull.module.scss'
 import { Translation } from 'react-i18next';
 
-const NavigationFull = (props) => {
+const NavigationFull = ({changeLanguage}) => {
     const [activeBurger, setActiveBurger] = useState(false);
     const [activeSubTitle, setActiveSubTitle] = useState(false);
 
@@ -87,8 +87,8 @@ const NavigationFull = (props) => {
                             <option value={props.changeEng}>RU</option>
                             <option value={props.changeRu}>EN</option>
                         </select> */}
-                        <button onClick={props.changeEng}>EN</button>
-                        <button onClick={props.changeRu}>RU</button>
+                        <button onClick={() => {changeLanguage("en")}}>EN</button>
+                        <button onClick={() => {changeLanguage("ru")}}>RU</button>
                     </div>
 
 
