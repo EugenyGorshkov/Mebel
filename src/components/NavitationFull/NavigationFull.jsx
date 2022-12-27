@@ -10,6 +10,8 @@ const NavigationFull = ({changeLanguage}) => {
     const [activeBurger, setActiveBurger] = useState(false);
     const [activeSubTitle, setActiveSubTitle] = useState(false);
 
+    const [ln, setLn] = useState('en')
+
     const styleListItemTw = 'whitespace-nowrap uppercase font-semibold text-sm'
 
     // Burger toggle func
@@ -20,6 +22,10 @@ const NavigationFull = ({changeLanguage}) => {
     // Subtitle menu toggle func
     const activeSubTitleHandler = () => {
         activeSubTitle ? setActiveSubTitle(false) : setActiveSubTitle(true)
+    }
+
+    const setupLn = () => {
+        changeLanguage(setLn)
     }
 
     return (
@@ -83,12 +89,12 @@ const NavigationFull = ({changeLanguage}) => {
                     </li>
 
                     <div className='hidden lg:block absolute top-7 -right-20'>
-                        {/* <select name="" id="">
-                            <option value={props.changeEng}>RU</option>
-                            <option value={props.changeRu}>EN</option>
-                        </select> */}
-                        <button onClick={() => {changeLanguage("en")}}>EN</button>
-                        <button onClick={() => {changeLanguage("ru")}}>RU</button>
+                        <select value={ln} onChange={e => setLn(() => changeLanguage(e.target.value))}>
+                            <option value="ru">RU</option>o
+                            <option value="en">EN</option>
+                        </select>
+                        {/* <button onClick={() => {changeLanguage("en")}}>EN</button>
+                        <button onClick={() => {changeLanguage("ru")}}>RU</button> */}
                     </div>
 
 
