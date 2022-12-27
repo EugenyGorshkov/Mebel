@@ -11,6 +11,9 @@ import samsungLogo from '/src/assets/logoSponcer/pngwing.svg'
 import Carousel from '../../components/HomePage/Carousel';
 
 const HomePage = () => {
+
+    
+
     return (
         <>
             {/*Стартовое отображение*/}

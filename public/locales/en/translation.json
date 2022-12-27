@@ -1,0 +1,13 @@
+{
+    "NavigationTitle": {
+        "part1": "HOME",
+        "part2": "GALLERY",
+        "part3": "COMPANY",
+        "part4": "CONTACTS"
+    },
+    "title": "Eng Title",
+    "description": {
+        "part1": "To get started, edit <1>src/App.js</1> and save to reload.",
+        "part2": "Switch language between english and russian using buttons above."
+    }
+}
