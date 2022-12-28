@@ -10,7 +10,7 @@ const NavigationFull = ({changeLanguage}) => {
     const [activeBurger, setActiveBurger] = useState(false);
     const [activeSubTitle, setActiveSubTitle] = useState(false);
 
-    const [ln, setLn] = useState("en")
+    const [ln, setLn] = useState("ru")
 
     const styleListItemTw = 'whitespace-nowrap uppercase font-semibold text-sm'
 
