@@ -17,15 +17,7 @@ const App = () => {
     const changeLanguage = (language) => {
         i18n.changeLanguage(language)
     }
-
-    // const changeRu = () => {
-    //     changeLanguage("ru")
-    // }
-
-    // const changeEng = () => {
-    //     changeLanguage("en")
-    // }
-
+    
     return (
         <div className='flex flex-col h-full'>
             <NavigationFull changeLanguage={changeLanguage}/>
