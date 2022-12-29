@@ -91,7 +91,7 @@ const HomePage = () => {
                             <Translation>
                                 {
                                     t =>
-                                        <h2 className='font-bold text-3xl text-white'>
+                                        <h2 className='font-bold text-3xl text-white first-letter:text-color-home'>
                                             {t("HomePage.IndividualBlockPart1")}
                                         </h2>
                                 }
