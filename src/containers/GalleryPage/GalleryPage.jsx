@@ -4,11 +4,18 @@ import { FETCH_IMAGES } from "../../apollo/Gallery.js";
 import Loader from "../../components/UI/Loader/Loader.jsx";
 import GalleryModal from "../../components/GalleryPage/GalleryModal";
 
-const GalleryPage = () => {
+const GalleryPage = ({
+    setScrollModal
+}) => {
     const [activeModal, setActiveModal] = useState(false);
+    const [currentImgId, setCurrentImgId] = useState('')
+    const [currentImgUrl, setCurrentImgUrl] = useState('')
 
-    const activeModalHandler = () => {
+    const activeModalHandler = (id, url) => {
         activeModal ? setActiveModal(false) : setActiveModal(true)
+        activeModal ? setScrollModal(false) : setScrollModal(true)
+        setCurrentImgId(id)
+        setCurrentImgUrl(url)
     }
 
     const { loading, error, data } = useQuery(FETCH_IMAGES)
@@ -38,11 +45,17 @@ const GalleryPage = () => {
                 <GalleryModal 
                     activeModalHandler={activeModalHandler} 
                     activeModal={activeModal}
+                    currentImgId={currentImgId}
+                    currentImgUrl={currentImgUrl}
                 />
                 <div className="grid lg:grid-cols-3 gap-5 pb-10">
                     {data.galleries.map(el => {
                         return (
-                            <div className="ml-5 mr-5 lg:m-0" key={el.content.id} onClick={activeModalHandler}>
+                            <div 
+                                className="ml-5 mr-5 lg:m-0" 
+                                key={el.content.id} 
+                                onClick={()=>{activeModalHandler(el.content.id,el.content.publicUrl)}}
+                            >
                                 <img src={el.content.publicUrl} alt='none'/>
                             </div>
                         )

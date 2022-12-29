@@ -1,0 +1,6 @@
+.app {
+    overflow: visible;
+    &.modalActive {
+        overflow: hidden;
+    }
+}

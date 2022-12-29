@@ -6,3 +6,6 @@ const client = new ApolloClient({
 })
 
 export default client
+
+// jino 'https://oeebg.space/api/graphql'
+// serv ''
