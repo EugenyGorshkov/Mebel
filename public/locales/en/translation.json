@@ -1,0 +1,31 @@
+{
+    "NavigationTitle": {
+        "part1": "HOME",
+        "part2": "GALLERY",
+        "part3": "COMPANY",
+        "part4": "CONTACTS"
+    },
+    "HomePage": {
+        "StartBlock": "A BETTER\n LIFE\n CREATED\n FOR YOU!",
+        "ButtonStartBlock": "Go to gallery",
+        "MyWorksBlock": "My works",
+        "IndividualBlockPart1": "Individual furniture",
+        "IndividualBlockPart2": "Full production cycle.",
+        "IndividualBlockPart3": "The quality of author's furniture begins long before the start of its production.",
+        "AllStartedBlockPart1": "How it all started",
+        "AllStartedBlockPart2": "5 years long work",
+        "AllStartedBlockPart3": "Every author claims to do everything for their clients, but not every author is able to back up their claims with years of history.",
+        "PartnersBlock": "Partners"
+    },
+    "Questions": {
+        "Title": "Fill the form",
+        "SubTitle": "have any questions?",
+        "NameBlock": "Your name*",
+        "TelephoneBlock": "Your phone number*",
+        "CountryBlock": "A country",
+        "CommentBlock": "A comment",
+        "Accept": "By confirming the order, I accept the terms of the user agreement",
+        "ButtonAccept": "request a call",
+        "MessageAccept": "Thank you, we will contact you!"  
+    }
+}

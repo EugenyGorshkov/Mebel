@@ -1,0 +1,11 @@
+.modalBody {
+    .arrows {
+        display: none;
+    }
+}
+
+.modalBody:hover{
+    .arrows {
+        display: block;
+    }
+}

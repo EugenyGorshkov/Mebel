@@ -1,13 +1,34 @@
-import React from "react";
-import {useQuery} from "@apollo/client";
-import {FETCH_IMAGES} from "../../apollo/Gallery.js";
+import React, { useEffect, useState } from "react";
+import { useQuery } from "@apollo/client";
+import { FETCH_IMAGES } from "../../apollo/Gallery.js";
+import Loader from "../../components/UI/Loader/Loader.jsx";
+import GalleryModal from "../../components/GalleryPage/GalleryModal";
 
-const GalleryPage = () => {
+const GalleryPage = ({
+    setScrollModal
+}) => {
+    const [activeModal, setActiveModal] = useState(false);
+    const [currentImgId, setCurrentImgId] = useState('')
+    const [currentImgUrl, setCurrentImgUrl] = useState('')
+    const [currentImgPosition, setCurrentImgPostion] = useState(0)
 
-    const {loading, error, data} = useQuery(FETCH_IMAGES)
+    // открытие модалки и стартовые данные сразу уходят в модалку
+    const activeModalHandler = (id, url, index) => {
+        activeModal ? setActiveModal(false) : setActiveModal(true)
+        activeModal ? setScrollModal(false) : setScrollModal(true)
+        setCurrentImgId(id)
+        setCurrentImgUrl(url)
+        setCurrentImgPostion(index)
+    }
+
+    const { loading, error, data } = useQuery(FETCH_IMAGES)
 
     if (loading) {
-        return <h2 className="text-center pt-12 font-bold text-xl">Loading...</h2>
+        return (
+            <div className='container mx-auto flex gap-12 lg:flex-row flex-col justify-center'>
+                <Loader />
+            </div>
+        )
     }
 
     if (error) {
@@ -22,17 +43,36 @@ const GalleryPage = () => {
 
     return (
         <>
-            <div className='container mx-auto flex gap-12 lg:flex-row flex-col'>
-                {data.galleries.map(el => {
-                    return (
-                        <div>
-                            <img src={el.content.publicUrl} alt='none' key={el.content.id}/>
-                        </div>
-                    )
-                })}
+            <div className='container mx-auto'>
+                <h2 className="text-center p-5 font-bold text-xl">Примеры работ</h2>
+                <GalleryModal 
+                    allImg={data.galleries}
+                    activeModalHandler={activeModalHandler} 
+                    activeModal={activeModal}
+                    currentImgId={currentImgId}
+                    currentImgUrl={currentImgUrl}
+                    currentImgPosition={currentImgPosition}
+                    setCurrentImgPostion={setCurrentImgPostion}
+                    setCurrentImgUrl={setCurrentImgUrl}
+                />
+                <div className="grid lg:grid-cols-3 gap-5 pb-10">
+                    {data.galleries.map((el, index) => {
+                        return (
+                            <div 
+                                className="ml-5 mr-5 lg:m-0" 
+                                key={el.content.id} 
+                                onClick={()=>{activeModalHandler(el.content.id,el.content.publicUrl,index)}}
+                            >
+                                <img src={el.content.publicUrl} alt='none'/>
+                            </div>
+                        )
+                    })}
+                </div>
             </div>
         </>
     )
 }
 
 export default GalleryPage
+
+
