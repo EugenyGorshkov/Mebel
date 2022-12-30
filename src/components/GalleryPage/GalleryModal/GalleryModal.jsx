@@ -48,11 +48,17 @@ const GalleryModal = ({
     const arrowRightHandler = () => {
         let index = 0;
         for(let element of allImg) {
-            console.log(element);
             if (index === currentImgPosition) {
-                setCurrentImgPostion(index+1)
-                setCurrentImgUrl(allImg[index+1].content.publicUrl)
-                console.log(currentImgPosition);
+                index++
+                if(index < allImg.length) {
+                    setCurrentImgPostion(index)
+                    setCurrentImgUrl(allImg[index].content.publicUrl)
+                    break
+                } else {
+                    index = 0
+                    setCurrentImgPostion(index)
+                    setCurrentImgUrl(allImg[index].content.publicUrl)
+                }
                 break
             }
             index++
@@ -62,9 +68,16 @@ const GalleryModal = ({
         let index = 0;
         for(let element of allImg) {
             if (index === currentImgPosition) {
-                console.log(currentImgPosition);
-                setCurrentImgPostion(index-1)
-                setCurrentImgUrl(allImg[index-1].content.publicUrl)
+                if (index > 0) {
+                    index--
+                    setCurrentImgPostion(index)
+                    setCurrentImgUrl(allImg[index].content.publicUrl)
+                } else {
+                    index = allImg.length - 1
+                    setCurrentImgPostion(index)
+                    setCurrentImgUrl(allImg[index].content.publicUrl)
+                }
+
                 
                 break
             }
@@ -79,8 +92,10 @@ const GalleryModal = ({
     return (
         <div className={cn('absolute top-0 left-0 h-full w-full overflow-hidden', activeModal ? 'block' : 'hidden')}>
             {/* bg - modal */}
-            <div className={cn('relative z-50 h-full w-full flex justify-center items-center bg-black opacity-70', activeModal ? 'block' : 'hidden')}
-                onClick={activeModalHandler}>
+            <div 
+                className={cn('relative z-50 h-full w-full flex justify-center items-center bg-black opacity-70', activeModal ? 'block' : 'hidden')}
+                onClick={activeModalHandler}
+            >  
             </div>
             <div 
                 className={cn('absolute z-50 top-5 right-5', activeModal ? 'block' : 'hidden')}
@@ -89,8 +104,8 @@ const GalleryModal = ({
                 <img src={crossX} alt="" className='max-h-8'/>
             </div>
             {/* modal body */}
-            <div className={cn('z-50 absolute flex top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] max-h-[80%]', activeModal ? 'block' : 'hidden',styles.modalBody)}>
-                <div className='h-full relative'>
+            <div className={cn('z-50 absolute flex top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]', activeModal ? 'block' : 'hidden',styles.modalBody)}>
+                <div className='relative'>
                     {/* Arrrow Left */}
                     <img 
                         src={arrrowLeft} 
@@ -102,7 +117,6 @@ const GalleryModal = ({
                     <img 
                         src={currentImgUrl} 
                         alt="" 
-                        className='h-full'
                     />
                     {/* Arrrow Left */}
                     <img 
