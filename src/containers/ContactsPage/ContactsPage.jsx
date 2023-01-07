@@ -1,11 +1,14 @@
 import React from 'react';
 import ContactCard from '../../components/ContactsPage/ContactCard';
 import QuestionForm from '../../components/HomePage/QuestionForm';
+import MapCard from "../../components/ContactsPage/MapCard/MapCard.jsx";
+
 
 const ContactsPage = () => {
     return (
         <>
             <div className='container mx-auto'>
+                <MapCard/>
                 <div className='flex flex-col lg:flex-row gap-8 justify-center m-8'>
                     <ContactCard 
                         header='Москва' 

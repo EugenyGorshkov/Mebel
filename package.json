@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@apollo/client": "^3.7.2",
+    "@pbe/react-yandex-maps": "^1.2.2",
     "classnames": "^2.3.2",
     "graphql": "^16.6.0",
     "i18next": "^22.4.6",
