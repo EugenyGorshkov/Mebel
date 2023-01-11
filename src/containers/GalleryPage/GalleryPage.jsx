@@ -3,6 +3,7 @@ import { useQuery } from "@apollo/client";
 import { FETCH_IMAGES } from "../../apollo/Gallery.js";
 import Loader from "../../components/UI/Loader/Loader.jsx";
 import GalleryModal from "../../components/GalleryPage/GalleryModal";
+import { Translation } from 'react-i18next';
 
 const GalleryPage = ({
     setScrollModal
@@ -44,7 +45,12 @@ const GalleryPage = ({
     return (
         <>
             <div className='container mx-auto'>
-                <h2 className="text-center p-5 font-bold text-xl">Примеры работ</h2>
+            <Translation>
+                        {
+                            t => 
+                <h2 className="text-center p-5 font-bold text-xl">{t("Gallery.Title")}</h2>
+            }
+            </Translation> 
                 <GalleryModal 
                     allImg={data.galleries}
                     activeModalHandler={activeModalHandler} 

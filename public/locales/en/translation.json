@@ -27,5 +27,11 @@
         "Accept": "By confirming the order, I accept the terms of the user agreement",
         "ButtonAccept": "request a call",
         "MessageAccept": "Thank you, we will contact you!"  
+    },
+    "Gallery": {
+        "Title": "Work examples"
+    },
+    "About": {
+        "Card1": "Who buys our furniture"
     }
 }

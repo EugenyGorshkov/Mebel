@@ -3,6 +3,8 @@ import cn from 'classnames'
 
 import mainImg from '/src/assets/10000_Post01.svg'
 
+import { Translation } from 'react-i18next';
+
 const AboutCard = ({
     theme,
 }) => {
@@ -27,12 +29,15 @@ const AboutCard = ({
                     
                 </div>
                 <div className={cn('basis-4/7 order-1 mr-10 ml-10', theme === 'one' ? themeOrder2 : themeOrder1)}>
-                    <h2 className='font-medium text-lg lg:text-3xl mb-5 lg:mb-10'>
-                        <span className='text-white relative '>
-                            <div className='-z-10 absolute -top-3 -left-7 lg:-top-2  h-10 w-10 lg:h-12 lg:w-12 bg-[#A9C2BE]'></div>
-                            К
-                        </span>то покупает нашу мебель 
+                <Translation>
+                        {
+                            t => 
+                    <h2 className='font-medium text-lg lg:text-3xl mb-5 lg:mb-10 first-letter:bg-[#A9C2BE] first-letter:-top-3'>
+                            {/* <div className='-z-10 absolute -top-3 -left-7 lg:-top-2  h-10 w-10 lg:h-12 lg:w-12 bg-[#A9C2BE]'></div> */}
+                            {t("About.Card1")}
                     </h2>
+                }
+                </Translation> 
                     <p className='font-light text-sm lg:text-lg'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure consequatur, enim accusamus dignissimos non cumque exercitationem nostrum ad odio, accusantium, temporibus illo nam provident vitae repellat consectetur aliquam neque quasi!</p>
                 </div>
             </div>
