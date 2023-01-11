@@ -98,7 +98,7 @@ const Carousel = () => {
                 {data.galleries.map((el) => {
                     return (
                         <div key={el.content.id} className='p-5' >
-                            <img src={el.content.publicUrl} alt={el.content.id} />
+                            <img src={el.content.publicUrl} className='object-fill h-96 w-96' alt={el.content.id} />
                         </div>
                     )
                 })}

@@ -43,7 +43,7 @@ const HomePage = () => {
                     </div>
                     <div className='basis-2/3 lg:mr-[15px]'>
                         <div className='lg:mt-24 flex justify-center'>
-                            <img src={mainImg} className="h-2/3 w-2/3" alt='none'></img>
+                            <img src={mainImg} className="object-fill h-[600px] w-[800px]" alt='none'></img>
                         </div>
                     </div>
                     <button
