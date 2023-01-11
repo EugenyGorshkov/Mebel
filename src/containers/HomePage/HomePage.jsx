@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import QuestionForm from '../../components/HomePage/QuestionForm';
 
 import mainImg from '/src/assets/1.jpg'
+import mainImg2 from '/src/assets/23.jpg'
 import zaraLogo from '/src/assets/logoSponcer/1280px-Zara_Logo.svg'
 import appleLogo from '/src/assets/logoSponcer/Apple-icon.svg'
 import vogueLogo from '/src/assets/logoSponcer/vogue-logo-1.svg'
@@ -77,7 +78,7 @@ const HomePage = () => {
                     <div className='pl-5 pr-5 lg:pr-0 lg:w-[600px] z-20'>
                         <img
                             className='w-full object-cover object-center lg:mt-[1.2rem] lg:pb-[1.2rem]'
-                            src={mainImg}
+                            src={mainImg2}
                             alt="#"
                         />
                     </div>
@@ -147,7 +148,7 @@ const HomePage = () => {
                         </Translation>
                     </div>
                     <div className='lg:self-end p-4 pt-0 lg:p-0 relative'>
-                        <img className='static z-0' src={mainImg} alt='#' />
+                        <img className='static z-0 object-fill h-[600px] w-[800px]' src={mainImg} alt='#' />
                         <div className='bg-[#FF9619] h-11 w-12 lg:h-14 lg:w-28 absolute -top-4 right-0 lg:top-[16.5rem] lg:-left-14 z-10'></div>
                     </div>
 
