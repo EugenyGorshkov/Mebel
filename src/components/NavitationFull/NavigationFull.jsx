@@ -6,13 +6,21 @@ import logo from '../../assets/logo.svg'
 import styles from './NavigationFull.module.scss'
 import { Translation } from 'react-i18next';
 
-const NavigationFull = ({changeLanguage}) => {
+const NavigationFull = ({
+    changeLanguage
+}) => {
     const [activeBurger, setActiveBurger] = useState(false);
     const [activeSubTitle, setActiveSubTitle] = useState(false);
 
-    const [ln, setLn] = useState("ru")
+    const [language, setLanguage] = useState("ru")
 
     const styleListItemTw = 'whitespace-nowrap uppercase font-semibold text-sm'
+
+    // фунция обработки смены языка
+    const changeLanguageHandlerToggler = (language) => {
+        changeLanguage(language)
+        setLanguage(language)
+    }
 
     // Burger toggle func
     const activeBurgerHandler = () => {
@@ -37,8 +45,8 @@ const NavigationFull = ({changeLanguage}) => {
             {/* Burger icon and select*/}
             <div className='flex items-center gap-4'>
                 <div className='block lg:hidden'>
-                        <select value={ln} onChange={e => setLn(() => changeLanguage(e.target.value))}>
-                            <option value="ru">RU</option>o
+                        <select value={language} onChange={e => changeLanguageHandlerToggler(e.target.value)}>
+                            <option value="ru">РУ</option>
                             <option value="en">EN</option>
                         </select>
                 </div>
@@ -90,8 +98,8 @@ const NavigationFull = ({changeLanguage}) => {
                     </li>
 
                     <div className='hidden lg:block absolute top-5 -right-20'>
-                        <select value={ln} onChange={e => setLn(() => changeLanguage(e.target.value))}>
-                            <option value="ru">RU</option>o
+                        <select value={language} onChange={e => changeLanguageHandlerToggler(e.target.value)}>
+                            <option value="ru">РУ</option>o
                             <option value="en">EN</option>
                         </select>
                     </div>

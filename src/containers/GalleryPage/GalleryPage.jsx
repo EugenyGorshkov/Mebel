@@ -69,7 +69,7 @@ const GalleryPage = ({
                                 key={el.content.id} 
                                 onClick={()=>{activeModalHandler(el.content.id,el.content.publicUrl,index)}}
                             >
-                                <img src={el.content.publicUrl} className='object-fill h-96 w-96' alt='none'/>
+                                <img src={el.content.publicUrl} className='object-fill object-center h-96 w-96' alt='none'/>
                             </div>
                         )
                     })}
