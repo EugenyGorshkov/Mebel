@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import QuestionForm from '../../components/HomePage/QuestionForm';
 
-import mainImg from '/src/assets/10000_Post01.svg'
+import mainImg from '/src/assets/1.jpg'
 import zaraLogo from '/src/assets/logoSponcer/1280px-Zara_Logo.svg'
 import appleLogo from '/src/assets/logoSponcer/Apple-icon.svg'
 import vogueLogo from '/src/assets/logoSponcer/vogue-logo-1.svg'
@@ -43,7 +43,7 @@ const HomePage = () => {
                     </div>
                     <div className='basis-2/3 lg:mr-[15px]'>
                         <div className='lg:mt-24 flex justify-center'>
-                            <img src={mainImg} alt='none'></img>
+                            <img src={mainImg} className="h-2/3 w-2/3" alt='none'></img>
                         </div>
                     </div>
                     <button
