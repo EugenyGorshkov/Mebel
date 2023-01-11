@@ -1,7 +1,7 @@
 import React from 'react';
 import cn from 'classnames'
 
-import mainImg from '/src/assets/10000_Post01.svg'
+import mainImg2 from '/src/assets/23.jpg'
 
 import { Translation } from 'react-i18next';
 
@@ -23,7 +23,7 @@ const AboutCard = ({
             <div className='flex flex-col lg:flex-row overflow-hidden pb-8 pt-8'>
                 <div className={cn('flex justify-start basis-3/7 m-6 lg:m-0 order-2', theme === 'one' ? themeOrder1 : themeOrder2)}>
                     <div className='relative w-full lg:h-60 xl:h-80'>
-                        <img src={mainImg} alt="#" className='z-10 w-full lg:h-60 xl:h-80'/>
+                        <img src={mainImg2} alt="#" className='z-10 w-full lg:h-60 xl:h-80'/>
                         <div className={cn('-z-10 absolute h-full w-56 xl:h-80 lg:h-64 lg:w-72 ',theme === 'one' ? themeAbsolute1 + ' ' + themeBgColor1 : themeAbsolute2 + ' ' + themeBgColor2)}></div>
                     </div>
                     
@@ -37,8 +37,13 @@ const AboutCard = ({
                             {t("About.Card1")}
                     </h2>
                 }
-                </Translation> 
-                    <p className='font-light text-sm lg:text-lg'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure consequatur, enim accusamus dignissimos non cumque exercitationem nostrum ad odio, accusantium, temporibus illo nam provident vitae repellat consectetur aliquam neque quasi!</p>
+                </Translation>
+                <Translation>
+                        {
+                            t =>  
+                    <p className='font-light text-sm lg:text-lg'>{t("About.TextCard1")}</p>
+                }
+                </Translation>
                 </div>
             </div>
         </>
