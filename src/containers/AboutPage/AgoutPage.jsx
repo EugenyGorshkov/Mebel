@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { useTranslation, Translation } from 'react-i18next';
+import { Translation } from 'react-i18next';
 
 import AboutCard from '../../components/AboutPage/AboutCard';
 import mainImg2 from '/src/assets/23.jpg'
@@ -42,16 +42,3 @@ const AboutPage = ({
 }
 
 export default AboutPage;
-
-
-// {
-//     t =>
-//         <p className='font-semibold text-2xl lg:font-bold lg:text-5xl text-white p-5 first-letter:text-color-home whitespace-pre-line'>
-//             {t("HomePage.StartBlock")}
-//         </p>
-// }
-
-// {
-//     t =>
-// <p className='font-light text-sm lg:text-lg'>{t("About.TextCard1")}</p>
-// }

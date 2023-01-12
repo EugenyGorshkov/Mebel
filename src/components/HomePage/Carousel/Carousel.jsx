@@ -4,8 +4,6 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import { Photos } from './photos';
-
 import chevronLeft from '../../../assets/arrows/chevron-left.png'
 import chevronRight from '../../../assets/arrows/chevron-right.png'
 

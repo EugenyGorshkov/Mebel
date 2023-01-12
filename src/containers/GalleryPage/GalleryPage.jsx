@@ -11,7 +11,7 @@ const GalleryPage = ({
     const [activeModal, setActiveModal] = useState(false);
     const [currentImgId, setCurrentImgId] = useState('')
     const [currentImgUrl, setCurrentImgUrl] = useState('')
-    const [currentImgPosition, setCurrentImgPostion] = useState(0)
+    const [currentImgPosition, setCurrentImgPosition] = useState(0)
 
     // открытие модалки и стартовые данные сразу уходят в модалку
     const activeModalHandler = (id, url, index) => {
@@ -19,7 +19,7 @@ const GalleryPage = ({
         activeModal ? setScrollModal(false) : setScrollModal(true)
         setCurrentImgId(id)
         setCurrentImgUrl(url)
-        setCurrentImgPostion(index)
+        setCurrentImgPosition(index)
     }
 
     const { loading, error, data } = useQuery(FETCH_IMAGES)
@@ -58,7 +58,7 @@ const GalleryPage = ({
                     currentImgId={currentImgId}
                     currentImgUrl={currentImgUrl}
                     currentImgPosition={currentImgPosition}
-                    setCurrentImgPostion={setCurrentImgPostion}
+                    setCurrentImgPostion={setCurrentImgPosition}
                     setCurrentImgUrl={setCurrentImgUrl}
                 />
                 <div className="grid lg:grid-cols-3 gap-5 pb-10">

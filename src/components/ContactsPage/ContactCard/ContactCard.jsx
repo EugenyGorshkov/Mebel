@@ -3,7 +3,7 @@ import React from 'react';
 const ContactCard = ({
     header,
     address,
-    adressName,
+    addressName,
     email,
     tel,
 }) => {
@@ -12,7 +12,7 @@ const ContactCard = ({
             <div className='p-14'>
                 <h2 className='text-[#FF9619] text-2xl font-bold mb-5'>{header}</h2>
                 <p className='text-white font-normal'><span className='font-bold'>Адресс:</span> {address}</p>
-                <p className='text-white font-bold'>{adressName}</p>
+                <p className='text-white font-bold'>{addressName}</p>
                 <p className='text-white font-normal'><span className='font-bold'>Почта:</span> {email}</p>
                 <p className='text-white font-normal'><span className='font-bold'>Телефон:</span> {tel}</p>
             </div>
