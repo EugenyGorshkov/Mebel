@@ -10,7 +10,7 @@ const ContactsPage = () => {
         <>
             <div className='container mx-auto'>
                 <div className='flex flex-col lg:flex-row gap-8 justify-center m-8'>
-                    <MapCard />
+                    <MapCard/>
                 </div>
                 <Translation>
                     {
@@ -23,20 +23,20 @@ const ContactsPage = () => {
                                     email='example@mail.com'
                                     tel='8-800-555-35-35'
                                 />
-                                {/* <ContactCard
-                                    header='Москва'
-                                    address='ул.Пушкина д.42'
-                                    addressName='ТЦ Большой'
+                                <ContactCard
+                                    header={t("Contact.header1")}
+                                    address={t("Contact.address1")}
+                                    addressName={t("Contact.addressName1")}
                                     email='example@mail.com'
                                     tel='8-800-555-35-35'
                                 />
                                 <ContactCard
-                                    header='Москва'
-                                    address='ул.Пушкина д.42'
-                                    addressName='ТЦ Большой'
+                                    header={t("Contact.header1")}
+                                    address={t("Contact.address1")}
+                                    addressName={t("Contact.addressName1")}
                                     email='example@mail.com'
                                     tel='8-800-555-35-35'
-                                /> */}
+                                />
                             </div>
                     }
                 </Translation>
