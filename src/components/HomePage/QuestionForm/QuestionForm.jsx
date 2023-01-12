@@ -27,22 +27,30 @@ const QuestionForm = () => {
                     <div className='flex flex-col gap-5 mt-4 mb-4'>
                         <Translation>
                             {
-                                t => <input type="text" className='border-b border-[#D1D1D1] text-24 font-normal' placeholder={t("Questions.NameBlock")} />
+                                t => <input type="text" 
+                                className='border-b border-[#D1D1D1] text-24 font-normal' 
+                                placeholder={t("Questions.NameBlock")} />
                             }
                         </Translation>
                         <Translation>
                             {
-                                t => <input type="text" className='border-b border-[#D1D1D1] text-24 font-normal' placeholder={t("Questions.TelephoneBlock")} />
+                                t => <input type="text" 
+                                className='border-b border-[#D1D1D1] text-24 font-normal' 
+                                placeholder={t("Questions.TelephoneBlock")} />
                             }
                         </Translation>
                         <Translation>
                             {
-                                t => <input type="text" className='border-b border-[#D1D1D1] text-24 font-normal' placeholder={t("Questions.CountryBlock")} />
+                                t => <input type="text" 
+                                className='border-b border-[#D1D1D1] text-24 font-normal' 
+                                placeholder={t("Questions.CountryBlock")} />
                             }
                         </Translation>
                         <Translation>
                             {
-                                t => <input type="text" className='border-b border-[#D1D1D1] text-24 font-normal' placeholder={t("Questions.CommentBlock")} />
+                                t => <input type="text" 
+                                className='border-b border-[#D1D1D1] text-24 font-normal' 
+                                placeholder={t("Questions.CommentBlock")} />
                             }
                         </Translation>
                     </div>
