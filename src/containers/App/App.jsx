@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import cn from 'classnames'
 
 import Footer from '../../components/Footer';
@@ -8,7 +9,6 @@ import ContactsPage from '../ContactsPage';
 import HomePage from '../HomePage';
 import GalleryPage from "../GalleryPage";
 import AboutPage from '../AboutPage';
-import { useTranslation } from 'react-i18next';
 
 import styles from './App.module.scss'
 
@@ -20,6 +20,7 @@ const App = () => {
 
     const changeLanguage = (language) => {
         i18n.changeLanguage(language)
+        document.documentElement.lang = language
     }
     
     return (
@@ -30,7 +31,7 @@ const App = () => {
                     <Route path='/' element={<HomePage />} />
                     <Route path='/contacts' element={<ContactsPage />} />
                     <Route path='/gallery' element={<GalleryPage setScrollModal={setScrollModal}/>} />
-                    <Route path='/about' element={<AboutPage />} />
+                    <Route path='/about' element={<AboutPage t={t}/>} />
                 </Routes>
             </div>
             <Footer />
