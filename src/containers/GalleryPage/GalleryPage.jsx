@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { useQuery } from "@apollo/client";
+import { Translation } from 'react-i18next';
+
 import { FETCH_IMAGES } from "../../apollo/Gallery.js";
 import Loader from "../../components/UI/Loader/Loader.jsx";
 import GalleryModal from "../../components/GalleryPage/GalleryModal";
-import { Translation } from 'react-i18next';
+import useWindowDimensions from "../../hooks/useWindowDimensions.js";
 
 const GalleryPage = ({
     setScrollModal
 }) => {
+    const { height, width } = useWindowDimensions();
     const [activeModal, setActiveModal] = useState(false);
     const [currentImgId, setCurrentImgId] = useState('')
     const [currentImgUrl, setCurrentImgUrl] = useState('')
@@ -15,11 +18,13 @@ const GalleryPage = ({
 
     // открытие модалки и стартовые данные сразу уходят в модалку
     const activeModalHandler = (id, url, index) => {
-        activeModal ? setActiveModal(false) : setActiveModal(true)
-        activeModal ? setScrollModal(false) : setScrollModal(true)
-        setCurrentImgId(id)
-        setCurrentImgUrl(url)
-        setCurrentImgPosition(index)
+        if (width > 1024) {
+            activeModal ? setActiveModal(false) : setActiveModal(true)
+            activeModal ? setScrollModal(false) : setScrollModal(true)
+            setCurrentImgId(id)
+            setCurrentImgUrl(url)
+            setCurrentImgPosition(index)
+        }
     }
 
     const { loading, error, data } = useQuery(FETCH_IMAGES)
@@ -44,7 +49,7 @@ const GalleryPage = ({
 
     return (
         <>
-            <div className='container mx-auto'>
+            <div className='container mx-auto p-5'>
             <Translation>
                         {
                             t => 
@@ -61,7 +66,7 @@ const GalleryPage = ({
                     setCurrentImgPostion={setCurrentImgPosition}
                     setCurrentImgUrl={setCurrentImgUrl}
                 />
-                <div className="grid lg:grid-cols-3 gap-5 pb-10">
+                <div className="flex flex-col items-center lg:grid lg:grid-cols-3 gap-5 pb-10">
                     {data.galleries.map((el, index) => {
                         return (
                             <div 
@@ -69,7 +74,7 @@ const GalleryPage = ({
                                 key={el.content.id} 
                                 onClick={()=>{activeModalHandler(el.content.id,el.content.publicUrl,index)}}
                             >
-                                <img src={el.content.publicUrl} className='object-fill object-center h-96 w-96' alt='none'/>
+                                <img src={el.content.publicUrl} className='object-cover object-center lg:h-96 lg:w-96' alt='none'/>
                             </div>
                         )
                     })}
